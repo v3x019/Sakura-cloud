@@ -723,9 +723,13 @@ body {
     <div class="d-btn" id="b-lib" onclick="chgTab('lib')">library</div>
     <div class="d-btn" id="b-tut" onclick="chgTab('tut')">tutorial</div>
     <div class="d-btn" id="b-set" onclick="chgTab('set')">settings</div>
-    <div id="web">
-    <iframe src="Random/tabs.html.txt" class="web-frame"></iframe>
+    <div class="d-btn" id="b-web" onclick="chgTab('web')">web</div>
+   <div id="web" style="display: none; position: absolute; top: 10%; left: 5%; width: 90%; height: 80vh; background: #121212; border: 1px solid #333; z-index: 999; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.8);">
+    <button onclick="document.getElementById('web').style.display='none'" style="position: absolute; right: 15px; top: 10px; background: none; border: none; color: #fff; font-size: 20px; cursor: pointer;">✕</button>
+    <iframe src="Random/tabs.html" style="width: 100%; height: 100%; border: none; border-radius: 12px; padding-top: 30px; box-sizing: border-box;"></iframe>
 </div>
+
+  </div>
 
 
   </div>
