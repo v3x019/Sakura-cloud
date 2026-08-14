@@ -27,6 +27,31 @@ I should have put like helpful comments for ya here and there that can help you.
   --text: #f5f5f7;
   --muted: #888890; 
   --accent: #ffffff;
+ /* IMPORTANT: Ensure your outer popup container has position: relative; */
+.your-popup-container-class {
+  position: relative;
+  /* Keep your existing styles here */
+}
+
+/* Red X Style */
+.popup-close-x {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  color: #dc3545; /* Clean modern red */
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.1s ease, color 0.1s ease;
+}
+
+/* Subtle hover effect for better user experience */
+.popup-close-x:hover {
+  color: #bd2130; /* Slightly darker red on hover */
+  transform: scale(1.1);
+}
+
 }
 
 
@@ -757,7 +782,7 @@ body {
     <h2>Legal Notice & Disclaimer</h2>
     <div id="legal-scroll" style="max-height:160px; overflow-y:auto; font-size:13px; line-height: 1.6; color:#aaa; text-align:left; padding:15px; background:rgba(0,0,0,0.3); border-radius:12px; margin-bottom:20px; border: 1px solid var(--border);" onscroll="checkLegalScroll(this)">
       <p><strong>Please read carefully before proceeding.</strong></p>
-      <p>corx and the mochii cloud platform are not hosting, storing, or distributing any of the games presented on this application. All games are merely embedded via standard iFrames pointing directly to their original providers.</p>
+      <p>Ayaan and the Sakura cloud platform are not hosting, storing, or distributing any of the games presented on this application. All games are merely embedded via standard iFrames pointing directly to their original providers.</p>
       <p>We do not claim ownership of any trademarks, copyrighted materials, or intellectual property displayed within the application. If there are any legal disputes or DMCA claims regarding the hosting and playing of these games, they should be directed towards the source host, <strong>Raccoon Games</strong>.</p>
       <p>By clicking "I Agree", you acknowledge that corx acts solely as a UI aggregator and is free from any liability regarding third-party content.</p>
       <p><em>Scroll to the bottom to accept. NOTE THIS PLEASE, YOU MUST ALLOW POP UPS!</em></p><br><br>
@@ -779,8 +804,9 @@ body {
     <div class="popup-icon-container">
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
     </div>
+   <span class="popup-close-x" onclick="hidePopup('p-tut-block')">&times;</span>
     <h2>wait up</h2>
-    <p><b>go to tutorial if you havnt logged in</b>,   press enter twice to skip.</p>
+    <p><b>go to tutorial if you havent logged in</b>press enter twice to skip.</p>
     <div class="popup-btn-row">
       <button class="popup-btn secondary" onclick="hidePopup('p-tut-block')">Cancel</button>
       <button class="popup-btn primary" onclick="goToTutorial()">Go to Tutorial</button>
