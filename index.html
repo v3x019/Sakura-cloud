@@ -64,6 +64,7 @@ I should have put like helpful comments for ya here and there that can help you.
 
 
 
+
   /*BODY */
 body {
   margin: 0; padding: 0; background: var(--bg); color: var(--text);
@@ -990,7 +991,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   rSz();aP();
 });
 
-let bgM=new Audio('backgroundmusic.mp3');bgM.loop=true;let bgMuted=localStorage.getItem('bg_muted')==='true';let aInit=false;
+let bgM=new Audio('gaara_theme.mp3');bgM.loop=true;let bgMuted=localStorage.getItem('bg_muted')==='true';let aInit=false;
 function initAudio(){if(!aInit&&!bgMuted){bgM.play().catch(e=>console.log(e));aInit=true;}}
 window.addEventListener('pointerdown',initAudio,{once:true});
 window.addEventListener('keydown',initAudio,{once:true});
