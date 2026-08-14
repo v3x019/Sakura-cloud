@@ -991,12 +991,12 @@ window.addEventListener('DOMContentLoaded',()=>{
   rSz();aP();
 });
 
-
-let bgM=new Audio('gaara_theme.mp3');bgM.loop=true;let bgMuted=localStorage.getItem('bg_muted')==='true';let aInit=false;
+let bgM=new Audio('gaaras_theme.mp3');bgM.loop=true;let bgMuted=localStorage.getItem('bg_muted')==='true';let aInit=false;
 function initAudio(){if(!aInit&&!bgMuted){bgM.play().catch(e=>console.log(e));aInit=true;}}
 window.addEventListener('pointerdown',initAudio,{once:true});
 window.addEventListener('keydown',initAudio,{once:true});
-let gpLoop, lastGpState={}, focusedEl=null, lastGpMove=0, curTabIdx=0;
+
+ let gpLoop, lastGpState={}, focusedEl=null, lastGpMove=0, curTabIdx=0;
 const TABS = ['cine', 'lib', 'tut', 'set'];
 function gpInit() {
   if(gpLoop) return;
