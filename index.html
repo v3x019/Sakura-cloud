@@ -826,43 +826,6 @@ body {
     </div>
   </div>
 </div>
- <script>
-function hidePopup(id) {
-    document.getElementById(id).style.display = 'none';
-}
-
-// Monitor the embedded tutorial iframe
-document.getElementById('login-iframe').addEventListener('load', function() {
-    const iframeDoc = this.contentWindow.document;
-
-    // Core scanner function to check for your success phrase
-    function checkText() {
-        const pageText = iframeDoc.body.innerText || iframeDoc.body.textContent;
-        
-        if (pageText.toLowerCase().includes("your all set!")) {
-            // 1. Instantly hide the login popup box
-            hidePopup('p-tut-block');
-            
-            // 2. Reveal the main screen success message
-            document.getElementById('login-success-msg').style.display = 'block';
-            
-            // Stop watching once login is complete
-            observer.disconnect();
-        }
-    }
-
-    // Run an initial check right when the iframe loads
-    checkText();
-
-    // Set up a MutationObserver to watch for live text updates inside the embedded app
-    const observer = new this.contentWindow.MutationObserver(checkText);
-    
-    observer.observe(iframeDoc.body, {
-        childList: true,
-        subtree: true,
-        characterData: true
-    });
-});
 
 <div class="popup-wrap" id="p-sess-block" onclick="closePopupClick(event)">
   <div class="popup-box">
