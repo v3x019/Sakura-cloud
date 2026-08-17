@@ -67,15 +67,7 @@ I should have put like helpful comments for ya here and there that can help you.
     border: none;
     border-radius: 12px;
     background: transparent;
-}
-position: fixed !important;
-top: 0 !important;
-left: 0 !important;
-transform: none !important;
-width: 100vw !important;
-height: 100vh !important;
-margin: auto !important;
-z-index: 999999 !important;
+
 
 
 
@@ -731,17 +723,17 @@ body {
 <div class="d-btn" id="b-tut" onclick="chgTab('tut')">tutorial</div>
 <div class="d-btn" id="b-set" onclick="chgTab('set')">settings</div>
 <div class="d-btn" id="b-web" onclick="chgTab('web')">web</div>
-<div id="v-web" class="tab-view" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95vw; height: 62vh; background: #121212; border: 1px solid #333; z-index: 999; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); overflow: hidden;">
+<!-- No position overrides—letting your site's theme place and center this automatically -->
+<div id="v-web" class="tab-view" style="background: #121212; border: 1px solid #333; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); overflow: hidden; position: relative;">
     
+    <!-- Modern black flat button that triggers fullscreen for the site container -->
     <button onclick="toggleWebFullscreen()" style="position: absolute; top: 15px; right: 15px; background: #1a1a1a; color: #fff; border: 1px solid #333; padding: 8px 16px; font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer; z-index: 9999; transition: background 0.2s;" onmouseenter="this.style.background='#333'" onmouseleave="this.style.background='#1a1a1a'">
         ⛶ Fullscreen
     </button>
 
+    <!-- GUST Browser Embedded Frame stretching to fill the container size -->
     <iframe src="https://gust-browser.vercel.app" style="width: 100%; height: 100%; border: none; display: block;" allowfullscreen></iframe>
 </div>
-<script
-  document.body.appendChild(document.getElementById('v-web'));
-</script>
 
 
 
