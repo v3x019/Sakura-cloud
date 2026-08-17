@@ -14,7 +14,7 @@ I should have put like helpful comments for ya here and there that can help you.
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mochii cloud</title>
+<title>sakura</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap');
 
@@ -678,7 +678,7 @@ body {
   <div class="main-dock">
     <img src="https://freepngimg.com/convert-png/89656-icons-circle-computer-black-white-steam" class="d-logo">
     <div class="d-sep"></div>
-    <div class="d-btn active" id="b-cine" onclick="chgTab('cine')">mochii cloud</div>
+    <div class="d-btn active" id="b-cine" onclick="chgTab('cine')">Sakura</div>
     <div class="d-btn" id="b-lib" onclick="chgTab('lib')">library</div>
     <div class="d-btn" id="b-tut" onclick="chgTab('tut')">tutorial</div>
     <div class="d-btn" id="b-set" onclick="chgTab('set')">settings</div>
@@ -780,7 +780,7 @@ body {
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
     </div>
     <h2>wait up</h2>
-    <p><b>go to tutorial if you havnt logged in</b>,   press enter twice to skip.</p>
+    <p><b>go to tutorial if you haven’t logged in</b>,   press enter twice to skip.</p>
     <div class="popup-btn-row">
       <button class="popup-btn secondary" onclick="hidePopup('p-tut-block')">Cancel</button>
       <button class="popup-btn primary" onclick="goToTutorial()">Go to Tutorial</button>
