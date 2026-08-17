@@ -736,6 +736,15 @@ body {
   document.body.appendChild(document.getElementById('v-web'));
 </script>
 
+   <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.appendChild(document.getElementById('v-web'));
+    document.body.insertAdjacentHTML('beforeend',
+      `<div style="position:fixed;bottom:0;left:0;background:red;color:white;font-size:10px;z-index:99999;padding:8px;">
+        body: ${getComputedStyle(document.body).transform} | html: ${getComputedStyle(document.documentElement).transform}
+      </div>`);
+  });
+</script> 
 
 
 
