@@ -27,6 +27,7 @@ I should have put like helpful comments for ya here and there that can help you.
   --text: #f5f5f7;
   --muted: #888890; 
   --accent: #ffffff;
+}
  /* IMPORTANT: Ensure your outer popup container has position: relative; */
 .your-popup-container-class {
   position: relative;
@@ -708,7 +709,7 @@ body {
 <div class="d-btn" id="b-tut" onclick="chgTab('tut')">tutorial</div>
 <div class="d-btn" id="b-set" onclick="chgTab('set')">settings</div>
 <div class="d-btn" id="b-web" onclick="chgTab('web')">web</div>
-<div id="v-web" class="tab-view" style="position: absolute; top: 75vh; left: 5%; width: 50%; height: 65vh; background: #121212; border: 1px solid #333; z-index: 999; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); overflow: hidden;">
+<div id="v-web" class="tab-view" style="position: absolute; top: -65vh; left: 5%; width: 90%; height: 75vh; background: #121212; border: 1px solid #333; z-index: 999; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); overflow: hidden;">
     
     <!-- Modern black flat button that triggers fullscreen for the site container -->
     <button onclick="toggleWebFullscreen()" style="position: absolute; top: 15px; right: 15px; background: #1a1a1a; color: #fff; border: 1px solid #333; padding: 8px 16px; font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer; z-index: 9999; transition: background 0.2s;" onmouseenter="this.style.background='#333'" onmouseleave="this.style.background='#1a1a1a'">
@@ -716,10 +717,11 @@ body {
     </button>
 
     <!-- GUST Browser Embedded Frame stretching to full size -->
-    <iframe src="https://gust-browser.vercel.app" style="width: 100%; height: 100%; border: none; display: block;" allowfullscreen></iframe>
+    <iframe src="https://vercel.app" style="width: 100%; height: 100%; border: none; display: block;" allowfullscreen></iframe>
 </div>
 
-</div>
+
+  </div>
 
 
 
@@ -867,7 +869,7 @@ body {
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
     </div>
     <h2>developer embed</h2>
-    <p style="font-size:13px; color:#ccc;">you can skip to the easy work and use mochii cloud to play PC games.</p>
+    <p style="font-size:13px; color:#ccc;">you can skip to the easy work and use sakura cloud to play PC games.</p>
     <textarea id="embed-code-area" readonly style="width:100%; height:120px; background:rgba(0,0,0,0.5); color:#aaa; border:1px solid var(--border); border-radius:12px; padding:15px; font-family:monospace; font-size:12px; resize:none; margin-bottom:20px; box-sizing:border-box;"></textarea>
     <div class="popup-btn-row">
       <button class="popup-btn secondary" onclick="hidePopup('p-embed-block')">close</button>
@@ -878,7 +880,7 @@ body {
 
 <div id="m-a2hs" style="position:fixed; bottom:-200px; left:0; width:100%; background:var(--glass); backdrop-filter:blur(30px); border-top:1px solid var(--border); border-top-left-radius:24px; border-top-right-radius:24px; padding:25px; box-sizing:border-box; z-index:99999999999; transition:bottom 0.5s cubic-bezier(0.16,1,0.3,1); box-shadow:0 -10px 40px rgba(0,0,0,0.5);">
   <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-    <h3 style="margin:0; color:#fff; font-size:16px;">add mochii cloud to home screen</h3>
+    <h3 style="margin:0; color:#fff; font-size:16px;">add sakura cloud to home screen</h3>
     <svg onclick="clsA2hs()" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" style="cursor:pointer;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
   </div>
   <p style="margin:0; font-size:13px; color:#aaa; line-height:1.6;">For the ultimate fullscreen experience, tap <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" style="vertical-align:middle;margin:0 2px;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg> (iOS) or <b style="color:#fff;">&#8942;</b> (Android) and select <b>Add to Home Screen</b>.</p>
@@ -938,7 +940,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   let isStandAlone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://');
   
   if(isMobile) { 
-    setTimeout(() => { showToast("welcome to mochii cloud - mobile"); }, 2500); 
+    setTimeout(() => { showToast("welcome to sakura  - mobile"); }, 2500); 
     if(!localStorage.getItem('fig_a2hs') && !isStandAlone) {
       setTimeout(() => {
         let el = document.getElementById('m-a2hs');
